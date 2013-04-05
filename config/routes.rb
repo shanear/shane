@@ -46,8 +46,8 @@ Shane::Application.routes.draw do
   #     resources :products
   #   end
 
-  match 'about' => 'pages#about'
-  root :to => 'pages#about'
+  match 'main' => 'pages#main'
+  root :to => 'pages#main'
 
   # See how all your routes lay out with "rake routes"
 
