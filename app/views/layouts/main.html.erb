@@ -3,10 +3,12 @@
 <head>
   <title>Shane Russell</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "main" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<canvas id="game"></canvas>
 
 <div id="content" class="container">
   <%= yield %>
