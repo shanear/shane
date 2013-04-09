@@ -6,7 +6,7 @@ $(document).ready ->
     $topSection.css('margin-bottom',
       window.innerHeight - $topSection.height())
 
-  $("#navigation a").click ->
+  $("nav a").click ->
     href = $(this).attr("href");
     $el = $(href);
 

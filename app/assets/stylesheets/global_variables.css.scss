@@ -1,0 +1,18 @@
+$green: #233B1C;
+$blue: #58B8D5;
+$red: #862422;
+$light-grey: #CCCCCC;
+$dark-grey: #414141;
+
+$friendly-font: "Kreon", serif;
+$readable-font: "Oxygen", sans-serif;
+
+$content-padding: 50px;
+
+@mixin group {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
