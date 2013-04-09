@@ -46,7 +46,15 @@ Shane::Application.routes.draw do
   #     resources :products
   #   end
 
+  resources :articles, :only => [:new, :index, :create, :show] do
+    collection do
+      get :all
+    end
+  end
+
+  match 'blog' => 'articles#index'
   match 'main' => 'pages#main'
+
   root :to => 'pages#main'
 
   # See how all your routes lay out with "rake routes"

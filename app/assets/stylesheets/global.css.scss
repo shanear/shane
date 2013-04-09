@@ -42,11 +42,40 @@ h2 {
   margin-bottom: 5px;
 }
 
+h3 {
+  font-weight: bold;
+  font-size: 14pt;
+  color: $green;
+
+  a {
+    color: $green;
+
+    &:hover {
+      color: lighten($green, 20);
+      text-decoration: none;
+    }
+  }
+}
+
+a {
+  color: darken($blue, 30);
+
+  &:hover {
+    text-decoration: none;
+    color: $blue;
+  }
+}
+
+
 .lead {
   font-family: $friendly-font;
 }
 
 .article {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: $light-grey solid 1px;
+
   .info {
     margin: 0px;
     font-size: 9pt;
@@ -63,4 +92,32 @@ h2 {
       color: $green;
     }
   }
+
+  &.snippet {
+    @include group;
+
+    .info {
+      margin-top: -15px;
+    }
+
+    a.read-more {
+      display: block;
+      float: right;
+      width: auto;
+      background-color: $light-grey;
+      padding: 5px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+form .options {
+  text-align: center;
+}
+
+input, textarea {
+  width: 100%;
 }

@@ -1,0 +1,11 @@
+<div class="article">
+  <h2><%= article.title %></h2>
+
+  <div class="info">
+    <%= article_date(article) %>
+  </div>
+
+  <div class="content">
+    <%= markdown(article.content) %>
+  </div>
+</div>

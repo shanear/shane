@@ -226,10 +226,10 @@
 
 <div id="blog" class="content-section">
   <h2>What's on my mind</h2>
-  <h3>Title of a Blog Entry</h3>
-  <p>
-    These are some of the thoughts I manage to get down on paper.
-  </p>
+
+  <%= render partial: "articles/snippet", collection: @articles, as: :article %>
+
+  <a style="float: right" href="\blog">The rest of the articles.</a>
 </div>
 
 <div id="contact" class="content-section">
