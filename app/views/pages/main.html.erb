@@ -11,7 +11,7 @@
           <a href="#portfolio">Portfolio</a>
         </li>
         <li>
-          <a href="#blog">Writing</a>
+          <a href="#blog">Blog</a>
         </li>
         <li>
           <a href="#contact">Contact</a>
@@ -229,7 +229,7 @@
 
   <%= render partial: "articles/snippet", collection: @articles, as: :article %>
 
-  <a style="float: right" href="\blog">The rest of the articles.</a>
+  <%= link_to "All articles.", blog_path, class: "older-articles" %>
 </div>
 
 <div id="contact" class="content-section">

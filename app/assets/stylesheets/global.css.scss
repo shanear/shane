@@ -93,6 +93,11 @@ a {
     }
   }
 
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
   &.snippet {
     @include group;
 
@@ -112,6 +117,10 @@ a {
       }
     }
   }
+}
+
+.older-articles {
+  float: right;
 }
 
 form .options {
