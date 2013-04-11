@@ -3,13 +3,13 @@ $(document).ready ->
   $topSection = $('.content-section.top')
   offscreenMargin = window.innerHeight - $topSection.height()
   if offscreenMargin > 0
-    $topSection.css('margin-bottom',
-      window.innerHeight - $topSection.height())
+    $topSection.css('margin-bottom', window.innerHeight - $topSection.height())
 
   $("nav a").click ->
-    href = $(this).attr("href");
-    $el = $(href);
+    href = $(this).attr("href")
+    $el = $(href)
 
+    $(this).blur()
     $("html, body").animate(
       # TODO: 70 should references $header height
       {"scrollTop": $el.offset().top - 70}, 500
