@@ -7,6 +7,11 @@ class Article < ActiveRecord::Base
 
   scope :published, -> { where("published_at IS NOT NULL").order("published_at DESC") }
 
+  def publish
+    self.published_at = Time.now
+    save
+  end
+
   def published?
     !!published_at
   end
