@@ -9,10 +9,32 @@
   }
 
   header {
+    color: #444;
     background-color: white;
     width: 700px;
     position: fixed;
     z-index: 9999;
+
+    div.inner {
+      padding: 0px $content-padding;
+      clear: both;
+      padding-top: 5px;
+      border-bottom: 5px solid $green;
+      @include group
+    }
+
+    div {
+      padding: 0px 50px;
+      clear: both;
+      padding-top: 5px;
+      border-bottom: 5px solid $green;
+    }
+
+    h1 {
+      float: left;
+      line-height: 50px;
+      margin: 5px 0 0 0;
+    }
 
     div.inner {
       padding: 0px $content-padding;
