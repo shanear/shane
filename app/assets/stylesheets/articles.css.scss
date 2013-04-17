@@ -1,6 +1,6 @@
 @import "global_variables";
 
-#articles {
+#default {
   h2 {
     text-align: center;
     font-size: 20pt;
@@ -25,5 +25,12 @@
     .topic {
       color: $green;
     }
+  }
+
+  footer {
+    font-style: italic;
+    color: #aaa;
+    text-align: center;
+    font-size: 10px;
   }
 }
