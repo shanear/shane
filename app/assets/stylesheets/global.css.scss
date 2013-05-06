@@ -18,6 +18,19 @@ h1 {
   font-family: $friendly-font;
   font-size: 24pt;
 
+  a {
+    color: #333;
+
+    &:hover, &:focus, &:active {
+      color: #333;
+      font-weight: 300;
+
+      em {
+        font-weight: bold;
+      }
+    }
+  }
+
   em {
     color: $red;
     font-weight: 300;
@@ -50,7 +63,7 @@ h3 {
 a {
   color: darken($blue, 30);
 
-  &:hover {
+  &:hover, &:focus, &:active {
     text-decoration: none;
     color: $blue;
   }
@@ -64,7 +77,11 @@ a {
 .article {
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: $light-grey solid 1px;
+
+  .links {
+    padding: 5px;
+    float: right;
+  }
 
   .info {
     margin: 0px;
@@ -124,9 +141,21 @@ a {
 
   &.snippet {
     @include group;
+    margin-bottom: 50px;
 
     .info {
-      margin-top: -15px;
+      h3 {
+        line-height: 100%;
+        margin: 10px 0;
+      }
+
+      width: 290px;
+      float: right;
+    }
+
+    img {
+      width: 300px;
+      float: left;
     }
 
     a.read-more {
@@ -136,7 +165,7 @@ a {
       background-color: $light-grey;
       padding: 5px;
 
-      &:hover {
+      &:hover, &:focus, &:active {
         text-decoration: none;
       }
     }

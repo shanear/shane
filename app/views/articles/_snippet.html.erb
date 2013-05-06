@@ -1,9 +1,10 @@
 <div class="article snippet">
-  <h3><%= link_to(article.title, @article) %></h3>
-  <div class="info"><%= article_date(article) %></div>
   <div class="content">
-    <%= markdown(article.snippet) %>
-  </div>
+    <div class="info">
+      <h3><%= link_to(article.title, article) %></h3>
+      <%= article_date(article) %>
+    </div>
 
-  <%= link_to "Read more", @article, class: "read-more" %>
+    <%= link_to(image_tag(article.cover_image_url), article) %>
+  </div>
 </div>

@@ -1,4 +1,7 @@
-<%= render partial: @articles %>
+<h2>Archives</h2>
+<br/>
+
+<%= render partial: "snippet", collection: @articles, as: :article %>
 
 <footer>
   This is the end of my blog.<br/>

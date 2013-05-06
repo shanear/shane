@@ -1,4 +1,8 @@
 <div class="article">
+  <div class="links">
+    <%= link_to "archives", articles_path %>
+  </div>
+
   <h2><%= article.title %></h2>
 
   <div class="info">
@@ -7,6 +11,10 @@
 
   <div class="content">
     <%= markdown(article.content) %>
+  </div>
+
+  <div style="text-align: center">
+    <%= link_to "archives", articles_path %>
   </div>
 
   <% if admin? %>

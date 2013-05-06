@@ -19,4 +19,9 @@ class Article < ActiveRecord::Base
   def snippet
     content.split("\n")[0..2].join("\n")
   end
+
+  def cover_image_url
+    # Take the first image reference in the markdown
+    "blog/#{content[/!\[.*\]\((.*)\)/, 1]}"
+  end
 end
