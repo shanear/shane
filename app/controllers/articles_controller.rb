@@ -11,6 +11,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @subtitle = @article.title
   end
 
   def new
