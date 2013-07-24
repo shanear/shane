@@ -203,11 +203,54 @@
 
   <h3>Art</h3>
   <div class="group">
-  <% artworks = %w[ babel babel_floor143 babel_floor1321 self_portrait shoe typoportrait bag still_life_charcoal color_wheel tree].each do |name| %>
+  <% # TODO: Move this information to a class
+     artworks = [
+      {
+        name: "Babel",
+        filename: "babel",
+        ext: "jpg"
+      }, {
+        name: "Babel: Floor 143",
+        filename: "babel_floor143",
+        ext: "jpg"
+      }, {
+        name: "Babel: Floor 1321",
+        filename: "babel_floor1321",
+        ext: "jpg"
+      }, {
+        name: "Self Portrait",
+        filename: "self_portrait",
+        ext: "jpg"
+      }, {
+        name: "Shoe",
+        filename: "shoe",
+        ext: "jpg"
+      }, {
+        name: "Typographic Self Portrait",
+        filename: "typoportrait",
+        ext: "png"
+      }, {
+        name: "Crumpled",
+        filename: "bag",
+        ext: "jpg"
+      }, {
+        name: "Still Life",
+        filename: "still_life_charcoal",
+        ext: "jpg"
+      }, {
+        name: "Color Wheel",
+        filename: "color_wheel",
+        ext: "jpg"
+      }, {
+        name: "Tree",
+        filename: "tree",
+        ext: "jpg"
+      }]
+      artworks.each do |info| %>
       <div class="thumb">
-          <%= image_tag "portfolio/art/#{name}_thumb.#{name == "typoportrait" ? "png" : "jpg"}" %>
+          <%= image_tag "portfolio/art/#{info[:filename]}_thumb.#{info[:ext]}" %>
           <div class="info">
-            Title
+            <%= info[:name] %>
           </div>
       </div>
   <% end %>
@@ -229,7 +272,7 @@
 
   <%= render partial: "articles/snippet", collection: @articles, as: :article %>
 
-  <%= link_to "All articles.", blog_path, class: "older-articles" %>
+  <%= link_to "older articles", blog_path, class: "older-articles" %>
 </div>
 
 <div id="contact" class="content-section">
