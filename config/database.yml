@@ -1,3 +1,11 @@
+production:
+  adapter: mysql2
+  username: rails
+  password: ivg1W09Mqi
+  database: rails
+  host: localhost
+
+
 # SQLite version 3.x
 #   gem install sqlite3
 #
