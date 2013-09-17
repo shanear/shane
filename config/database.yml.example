@@ -1,7 +1,7 @@
 production:
   adapter: mysql2
   username: rails
-  password: ivg1W09Mqi
+  password: trexdadpugs3
   database: rails
   host: localhost
 

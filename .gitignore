@@ -17,3 +17,6 @@
 
 # Ignore public assets
 /public/assets
+
+# Ignore DB config data
+/config/database.yml
