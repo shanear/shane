@@ -83,8 +83,12 @@
     margin-bottom: 100px;
 
     &.top {
-      margin-top: 65px;
+      margin-top: 75px;
       margin-bottom: 600px;
+
+      .lead {
+        margin-bottom: 30px;
+      }
     }
 
     h3 {
