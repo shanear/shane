@@ -1,9 +1,11 @@
 $(document).ready ->
-  # Set the margin of the first section to push the second right beneath the fold
-  $topSection = $('.content-section.top')
-  offscreenMargin = window.innerHeight - $topSection.height()
-  if offscreenMargin > 0
-    $topSection.css('margin-bottom', window.innerHeight - $topSection.height())
+  # Make each section at least occupy an entire page
+  $('.content-section:not(#footer)').each (i, section)->
+    console.log "section" + i
+    $section = $(section)
+    offscreenMargin = window.innerHeight - $section.height()
+    if offscreenMargin > 0
+      $section.css('margin-bottom', window.innerHeight - $section.height())
 
   $("nav a").click ->
     href = $(this).attr("href")
