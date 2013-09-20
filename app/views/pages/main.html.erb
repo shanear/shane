@@ -192,59 +192,18 @@
       </script>
     </div>
 
-  <h3>I make art as well</h3>
-  <div class="group">
-  <% # TODO: Move this information to a class
-     artworks = [
-      {
-        name: "Babel",
-        filename: "babel",
-        ext: "jpg"
-      }, {
-        name: "Babel: Floor 143",
-        filename: "babel_floor143",
-        ext: "jpg"
-      }, {
-        name: "Babel: Floor 1321",
-        filename: "babel_floor1321",
-        ext: "jpg"
-      }, {
-        name: "Self Portrait",
-        filename: "self_portrait",
-        ext: "jpg"
-      }, {
-        name: "Shoe",
-        filename: "shoe",
-        ext: "jpg"
-      }, {
-        name: "Typographic Self Portrait",
-        filename: "typoportrait",
-        ext: "png"
-      }, {
-        name: "Crumpled",
-        filename: "bag",
-        ext: "jpg"
-      }, {
-        name: "Still Life",
-        filename: "still_life_charcoal",
-        ext: "jpg"
-      }, {
-        name: "Color Wheel",
-        filename: "color_wheel",
-        ext: "jpg"
-      }, {
-        name: "Tree",
-        filename: "tree",
-        ext: "jpg"
-      }]
-      artworks.each do |info| %>
-      <div class="thumb">
-          <%= image_tag "portfolio/art/#{info[:filename]}_thumb.#{info[:ext]}" %>
-          <div class="info">
-            <%= info[:name] %>
-          </div>
-      </div>
-  <% end %>
+  <div id="artworks">
+    <h3>I make art as well</h3>
+    <div class="group">
+      <% Artwork.all.each do |artwork| %>
+          <a href="/artworks/<%= artwork.id %>" class="thumb">
+              <%= image_tag artwork.thumb_path %>
+              <div class="info">
+                <%= artwork.name %>
+              </div>
+          </a>
+      <% end %>
+
       <script>
         $(".thumb").hover(
           function() {
@@ -255,6 +214,7 @@
           }
         )
       </script>
+    </div>
   </div>
 </div>
 
@@ -269,7 +229,7 @@
 <div id="contact" class="content-section">
   <h2>Find me other places on the web</h2>
   <div class="group">
-    <a href="mailto: shane1337@gmail.com" class="contact" target="_blank">
+    <a href="mailto:shane1337@gmail.com" class="contact" target="_blank">
       <div class="icon email-icon">
         <%= image_tag "icons/email-48.png" %>
       </div>

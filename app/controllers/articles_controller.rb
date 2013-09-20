@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
-  before_filter :requires_admin, only: [:admin, :new, :create, :edit, :update, :publish]
+  layout "blog"
+  before_filter :requires_admin,
+    only: [:admin, :new, :create, :edit, :update, :publish]
 
   def index
     @articles = Article.published

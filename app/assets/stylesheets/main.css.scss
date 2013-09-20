@@ -127,7 +127,8 @@
       background: url("portfolio/projects/listia_web_blur.jpg");
     }
 
-    .thumb {
+    a.thumb {
+      color: $dark-grey;
       position: relative;
       float: left;
       padding: 15px;

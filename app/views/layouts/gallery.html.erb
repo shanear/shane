@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= "#{@subtitle} - " if @subtitle %>Shane Russell </title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+   <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-40187745-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</head>
+<body id="gallery" class="sub-page">
+
+<div id="content" class="container">
+  <header>
+    <h1>
+      <%= link_to "Shane<em>Gallery</em>".html_safe, root_path %>
+    </h1>
+    <p>Just for show.</p>
+  </header>
+
+  <% if flash[:notice] %>
+    <%= flash[:notice] %>
+  <% elsif flash[:error] %>
+    <%= flash[:error] %>
+  <% end %>
+
+  <%= yield %>
+
+  <div id="back-link">
+    <%= link_to "back to the main shane", root_path %>
+  </div>
+</div>
+
+
+</body>
+</html>

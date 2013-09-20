@@ -46,10 +46,12 @@ Shane::Application.routes.draw do
   #     resources :products
   #   end
 
-  resources :articles, :except => [:destroy] do
+  resources :articles, except: :destroy do
     get :admin, on: :collection
     get :publish, on: :member
   end
+
+  resources :artworks, only: :show
 
   match 'admin' => 'application#login'
   match 'blog' => 'articles#index'
