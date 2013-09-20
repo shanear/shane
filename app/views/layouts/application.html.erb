@@ -18,7 +18,7 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
-  </script> 
+  </script>
 </head>
 <body id="default">
 
@@ -37,6 +37,10 @@
   <% end %>
 
   <%= yield %>
+</div>
+
+<div id="back-link">
+  <%= link_to "back to the main shane", root_path %>
 </div>
 
 </body>
