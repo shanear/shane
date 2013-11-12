@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Matt Godfrey - Actor</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+  <%= csrf_meta_tags %>
+</head>
+<body id="matt">
+
+<div id="content">
+  <div id="side">
+    <%= image_tag "matt_headshot.jpg", class: "headshot img-circle" %>
+    <div class="social">
+      <div class="social-button imdb">
+        <a href="http://imdb.com">
+          <%= image_tag "icons/imdb-64.png"%>
+        </a>
+      </div>
+
+      <div class="social-button vimeo">
+        <a href="http://vimeo.com">
+          <%= image_tag "icons/vimeo-64.png"%>
+        </a>
+      </div>
+
+      <div class="social-button twitter">
+        <a href="http://twitter.com">
+          <%= image_tag "icons/twitter-64.png"%>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="header">
+    <h1>
+      <a href="#">
+        Matt Godfrey
+        <span class="description">
+          Actor, Writer
+        </span>
+
+        <span class="link-text">
+          See Resume
+        </span>
+      </a>
+    </h1>
+  </div>
+
+  <div id="reel">
+    <iframe src="//player.vimeo.com/video/33433195?byline=0&amp;portrait=0" width="610" height="342" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+  <div id="contact">
+    Like what you see? Contact me.
+    <br/>
+    <span class="phone">205-458-2303</span>
+    <span class="email">
+      <a href="mailto:matt@mattgodfrey.net" target="_blank">
+        matt@mattgodfrey.net
+      </a>
+    </span>
+  </div>
+
+  <div class="push"> </div>
+</div>
+
+<div class="footer">
+</div>
+
+</body>
+</html>

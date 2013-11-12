@@ -56,6 +56,7 @@ Shane::Application.routes.draw do
   match 'admin' => 'application#login'
   match 'blog' => 'articles#index'
   match 'main' => 'pages#main'
+  match 'matt' => 'pages#matt'
 
   root :to => 'pages#main'
 
