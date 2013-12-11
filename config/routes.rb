@@ -53,6 +53,10 @@ Shane::Application.routes.draw do
 
   resources :artworks, only: :show
 
+  namespace :thoughtworks do
+    resources :teams, only: [:create, :index]
+  end
+
   match 'admin' => 'application#login'
   match 'blog' => 'articles#index'
   match 'main' => 'pages#main'
