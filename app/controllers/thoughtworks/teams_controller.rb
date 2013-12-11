@@ -1,7 +1,7 @@
 class Thoughtworks::TeamsController < ApplicationController
-  TOKEN = ""
+  TOKEN = "TW4EVA8910"
 
-  before_filter :validate_token
+  before_filter :validate_token, only: :create
 
   def index
     @teams = Team.all
