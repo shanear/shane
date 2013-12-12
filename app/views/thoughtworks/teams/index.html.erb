@@ -1,5 +1,10 @@
 <h1> List of Teams </h1>
 
 <% @teams.each do |team| %>
-  <p><%=h team.name %></p>
+  <div class="team">
+    <div class="name"><%=h team.name %></p>
+    <div class="clue"><%=h team.clue %></p>
+    <div class="skips"><%=h team.skips %></p>
+    <div class="time"><%=h Time.at(team.seconds).utc.strftime("%H:%M:%S") %></p>
+  </div>
 <% end %>

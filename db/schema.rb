@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131211225751) do
+ActiveRecord::Schema.define(:version => 20131212185236) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -23,8 +23,11 @@ ActiveRecord::Schema.define(:version => 20131211225751) do
 
   create_table "teams", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "clue"
+    t.integer  "seconds",    :default => 0, :null => false
+    t.integer  "skips",      :default => 0, :null => false
   end
 
 end

@@ -3,7 +3,7 @@ class Thoughtworks::TeamsController < ApplicationController
 
   # Use simpler token verification logic
   skip_before_filter  :verify_authenticity_token
-  before_filter :validate_token, only: :create
+  before_filter :validate_token, only: [:create, :update]
 
   def index
     @teams = Team.all
@@ -11,10 +11,21 @@ class Thoughtworks::TeamsController < ApplicationController
 
   def create
     team = Team.new(params[:team])
-    team.save
 
     respond_to do |format|
-      format.json { render :json => {success: true} }
+      if team.save
+        format.json { render :json => {success: true} }
+      end
+    end
+  end
+
+  def update
+    @team = Team.where(name: params[:id]).first
+
+    respond_to do |format|
+      if @team.update_attributes(params[:team])
+        format.json { render :json => {success: true} }
+      end
     end
   end
 
