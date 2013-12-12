@@ -1,6 +1,8 @@
 class Thoughtworks::TeamsController < ApplicationController
   TOKEN = "TW4EVA8910"
 
+  # Use simpler token verification logic
+  skip_before_filter  :verify_authenticity_token
   before_filter :validate_token, only: :create
 
   def index
