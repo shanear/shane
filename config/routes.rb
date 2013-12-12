@@ -54,13 +54,14 @@ Shane::Application.routes.draw do
   resources :artworks, only: :show
 
   namespace :thoughtworks do
-    resources :teams, only: [:create, :index]
+    resources :teams, only: [:create, :update, :index]
   end
 
   match 'admin' => 'application#login'
   match 'blog' => 'articles#index'
   match 'main' => 'pages#main'
   match 'matt' => 'pages#matt'
+  match 'lyndon' => 'pages#lyndon'
 
   root :to => 'pages#main'
 
