@@ -13,7 +13,9 @@ class Thoughtworks::TeamsController < ApplicationController
     team = Team.new(params[:team])
     team.save
 
-    render nil
+    respond_to do |format|
+      format.json { render :json => {success: true} }
+    end
   end
 
   private
