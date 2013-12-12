@@ -2,7 +2,7 @@ class Thoughtworks::TeamsController < ApplicationController
   TOKEN = "TW4EVA8910"
 
   # Use simpler token verification logic
-  skip_before_filter  :verify_authenticity_token
+  skip_before_filter :verify_authenticity_token
   before_filter :validate_token, only: [:create, :update]
 
   def index
@@ -15,6 +15,8 @@ class Thoughtworks::TeamsController < ApplicationController
     respond_to do |format|
       if team.save
         format.json { render :json => {success: true} }
+      else
+        format.json { render :json => {success: false} }
       end
     end
   end
@@ -32,6 +34,6 @@ class Thoughtworks::TeamsController < ApplicationController
   private
 
   def validate_token
-    redirect_to root_path and return false unless params[:token] == TOKEN
+    redirect_to root_path and return false unless (params[:token] == TOKEN)
   end
 end
