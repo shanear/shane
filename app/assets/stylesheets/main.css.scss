@@ -298,4 +298,117 @@
   }
 }
 
+#thoughtworks {
+  #content {
+    margin: 10px auto;
+    width: 1150px;
+  }
+
+  #logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  h1 {
+    font-family: "Lobster Two", serif;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 38pt;
+
+    em {
+      font-weight: normal;
+      text-decoration: none;
+      color: #333;
+    }
+  }
+
+  #labels {
+    font-family: "Lato", serif;
+    font-weight: bold;
+    margin-left: 190px;
+
+    .clue-label {
+      width: 90px;
+      margin-left: 31px;
+      float: left;
+      text-align: center;
+    }
+  }
+
+  .team {
+    font-family: "Lato", serif;
+    margin-bottom: 10px;
+
+    .name {
+      font-size: 120%;
+      font-weight: bold;
+      width: 170px;
+    }
+
+    .clue-bar {
+      background-color: green;
+      border-radius: 5px;
+      width: 0px;
+      height: 20px;
+    }
+
+    .clue-bubbles {
+      height: 40px;
+      width: 640px;
+      margin-top: -30px;
+      margin-left: -20px;
+      margin-right: -20px;
+
+      .clue-bubble {
+        background-color: #ff9999;
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        margin-right: 80px;
+        float: left;
+
+        &.achieved {
+          background-color: green;
+        }
+
+        &.last {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    .field {
+      font-size: 16pt;
+      padding: 20px 10px;
+      float: right;
+      line-height: 40px;
+      vertical-align: middle;
+      margin-left: 10px;
+
+      &.name {
+        float: left;
+      }
+
+      &.clue {
+        background-color: #ff9999;
+
+        padding: 0px;
+        height: 20px;
+        margin: 30px 20px 30px 40px;
+        border-radius: 5px;
+      }
+
+      &.time {
+        margin-left: 40px;
+        width: 100px;
+      }
+
+      &.skips {
+        width: 70px;
+      }
+    }
+  }
+}
+
 

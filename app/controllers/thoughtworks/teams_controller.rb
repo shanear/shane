@@ -1,4 +1,6 @@
 class Thoughtworks::TeamsController < ApplicationController
+  layout "thoughtworks"
+
   TOKEN = "TW4EVA8910"
 
   # Use simpler token verification logic
@@ -6,7 +8,8 @@ class Thoughtworks::TeamsController < ApplicationController
   before_filter :validate_token, only: [:create, :update]
 
   def index
-    @teams = Team.all
+    @show_answers = true if params[:token] == TOKEN
+    @teams = Team.by_winning
   end
 
   def create

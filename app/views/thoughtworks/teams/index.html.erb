@@ -1,10 +1,55 @@
-<h1> List of Teams </h1>
+<div id="content">
+  <h1>Thought<em>Works</em> Holiday Scavenger Hunt Scoreboard</h1>
 
-<% @teams.each do |team| %>
-  <div class="team">
-    <div class="name"><%=h team.name %></p>
-    <div class="clue"><%=h team.clue %></p>
-    <div class="skips"><%=h team.skips %></p>
-    <div class="time"><%=h Time.at(team.seconds).utc.strftime("%H:%M:%S") %></p>
-  </div>
-<% end %>
+  <% if @show_answers %>
+    <div id="labels" class="clearfix">
+      <div class="clue-label">
+        Coffee Machine
+      </div>
+      <div class="clue-label">
+        Z & Y
+      </div>
+      <div class="clue-label">
+        Hops & Hominy
+      </div>
+      <div class="clue-label">
+        House of Shields
+      </div>
+      <div class="clue-label">
+        555 Mission POPOS
+      </div>
+      <div class="clue-label">
+        SF MOMA
+      </div>
+    </div>
+  <% end %>
+
+  <% @teams.each do |team| %>
+    <div class="team clearfix">
+      <div class="name field"><%=h team.name %></div>
+
+      <div class="skips field">
+        <%=h pluralize(team.skips, "skip") %>
+      </div>
+
+      <div class="time field">
+        <%=h Time.at(team.seconds).utc.strftime("%H:%M:%S") %>
+      </div>
+
+      <div class="clue field">
+        <div class="clue-bar" style="width:<%= (team.clue_position - 1) * 120 %>px">
+        </div>
+        <div class="clue-bubbles">
+          <% (team.clue_position).times do %>
+            <div class="clue-bubble achieved"></div>
+          <% end %>
+          <% (5 - team.clue_position).times do %>
+            <div class="clue-bubble"></div>
+          <% end %>
+
+          <div class="clue-bubble last <%= (team.clue_position == 6) ? "achieved" : ""%>"></div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
