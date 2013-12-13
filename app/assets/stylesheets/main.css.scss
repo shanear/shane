@@ -300,7 +300,7 @@
 
 #thoughtworks {
   #content {
-    margin: 10px auto;
+    margin: 20px auto;
     width: 1150px;
   }
 
@@ -360,6 +360,10 @@
       margin-left: -20px;
       margin-right: -20px;
 
+      .clue-bubble:last-child {
+        margin-right: 0px;
+      }
+
       .clue-bubble {
         background-color: #ff9999;
         height: 40px;
@@ -370,10 +374,6 @@
 
         &.achieved {
           background-color: green;
-        }
-
-        &.last {
-          margin-right: 0px;
         }
       }
     }

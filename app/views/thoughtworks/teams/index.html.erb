@@ -43,11 +43,9 @@
           <% (team.clue_position).times do %>
             <div class="clue-bubble achieved"></div>
           <% end %>
-          <% (5 - team.clue_position).times do %>
+          <% (6 - team.clue_position).times do %>
             <div class="clue-bubble"></div>
           <% end %>
-
-          <div class="clue-bubble last <%= (team.clue_position == 6) ? "achieved" : ""%>"></div>
         </div>
       </div>
     </div>
