@@ -63,7 +63,8 @@ Shane::Application.routes.draw do
   match 'matt' => 'pages#matt'
   match 'lyndon' => 'pages#lyndon'
 
-  root :to => 'pages#main'
+  root to: 'pages#matt', constraints: ->(r) { r.domain.match("matt") }
+  root to: 'pages#main'
 
   # See how all your routes lay out with "rake routes"
 
