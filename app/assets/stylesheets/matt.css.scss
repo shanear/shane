@@ -1,30 +1,40 @@
 html, body {
   height: 100%;
+  background-color: #eee;
 }
 
 #matt {
-  #wrap {
-  }
-
   .push, .footer {
     height: 30px;
   }
 
+  #stripe {
+    background-color: #f1f7fd;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  }
+
   #content {
     margin: 0 auto;
-    width: 783px;
+    width: 790px;
     clear: both;
     min-height: 100%;
     height: auto !important;
     height: 100%;
     margin: 0 auto -30px;
+    position: relative;
   }
 
   #side {
     padding-top: 10px;
     width: 215px;
-    float: left;
+    position: absolute;
+    left: 0px;
     margin: 0 -42px 5px 0;
+    height: 100%;
+    z-index: 1;
 
     img.headshot {
       width: 215px;
@@ -32,7 +42,7 @@ html, body {
     }
 
     .social-button {
-      background-color: #999;
+      background-color: #777;
       border-radius: 32px;
       width: 64px;
       height: 64px;
@@ -45,9 +55,14 @@ html, body {
     }
   }
 
+  #large {
+    position: absolute;
+    right: 0px;
+    z-index: 2;
+  }
 
   #header {
-    padding-top: 10px;
+    margin: 10px;
   }
 
   h1 {
@@ -58,26 +73,23 @@ html, body {
     text-transform: uppercase;
     padding-top: 50px;
     margin-bottom: 20px;
-    margin-left: 200px;
 
-    .description, .link-text {
-      color: #ccc;
+    .description {
       display: inline-block;
       float: right;
-      margin-right: 30px;
-    }
+      font-size: 22px;
+      line-height: 50px;
+      text-transform: none;
+      vertical-align: bottom;
+      color: #777;
 
-    .link-text {
-      display: none;
-    }
-
-    &:hover {
-      .description {
-        display: none;
-      }
-
-      .link-text {
-        display: block;
+      .subtext {
+        font-size: 12px;
+        line-height: 12px;
+        height: 15px;
+        margin-bottom: -15px;
+        text-align: center;
+        color: #999;
       }
     }
 
@@ -89,10 +101,9 @@ html, body {
   #contact {
     text-align: center;
     margin-top: 20px;
-    margin-left: 170px;
     font-family: "Lato", sans-serif;
     font-weight: 300;
-    color: #999;
+    color: #777;
 
     .email {
       padding: 0 5px;
