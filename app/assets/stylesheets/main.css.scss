@@ -8,6 +8,18 @@
     background-color: $blue;
   }
 
+  .mom {
+    a { color: $red; }
+  }
+
+  #mom {
+    img {
+      float: left;
+      width: 40%;
+      padding-right: 10px;
+    }
+  }
+
   header {
     color: #444;
     background-color: white;
