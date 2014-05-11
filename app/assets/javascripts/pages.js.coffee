@@ -14,7 +14,7 @@ $(document).ready ->
     $(this).blur()
     $("html, body").animate(
       # TODO: 70 should references $header height
-      {"scrollTop": $el.offset().top - 70}, 500
+      {"scrollTop": $el.offset().top }, 500
     )
     return false
 
@@ -23,11 +23,11 @@ $(document).ready ->
 
     scrollTop = $(window).scrollTop() + $("header").height() + 10;
 
-    if(scrollTop > $("#contact").position().top)
+    if(scrollTop > $("#mom").position().top)
+      $("a[href='#mom']").addClass("active")
+    else if(scrollTop > $("#contact").position().top)
       $("a[href='#contact']").addClass("active")
     else if(scrollTop > $("#blog").position().top)
       $("a[href='#blog']").addClass("active")
-    else if(scrollTop > $("#portfolio").position().top)
+    else #if(scrollTop > $("#portfolio").position().top)
       $("a[href='#portfolio']").addClass("active")
-    else
-      $("a[href='#about']").addClass("active")
