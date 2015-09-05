@@ -57,11 +57,12 @@ Shane::Application.routes.draw do
     resources :teams, only: [:create, :update, :index]
   end
 
+  resources :subscriptions, only: [:create]
+
   match 'admin' => 'application#login'
   match 'blog' => 'articles#index'
   match 'main' => 'pages#main'
   match 'matt' => 'pages#matt'
-  match 'lyndon' => 'pages#lyndon'
 
   root to: 'pages#matt', constraints: ->(r) { r.domain.match("matt") }
   root to: 'pages#main'
